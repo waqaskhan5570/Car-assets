@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?c00hvs");
+  src: url("fonts/icomoon.eot?c00hvs#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?c00hvs") format("truetype"),
+    url("fonts/icomoon.woff?c00hvs") format("woff"),
+    url("fonts/icomoon.svg?c00hvs#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-voice:before {
+  content: "\e900";
+}
+.icon-video:before {
+  content: "\e901";
+}
+.icon-tier:before {
+  content: "\e902";
+}
+.icon-service-icon:before {
+  content: "\e903";
+}
+.icon-range:before {
+  content: "\e904";
+}
+.icon-notification .path1:before {
+  content: "\e905";
+}
+.icon-notification .path2:before {
+  content: "\e906";
+  margin-left: -1em;
+}
+.icon-message-1:before {
+  content: "\e907";
+}
+.icon-message:before {
+  content: "\e908";
+}
+.icon-love:before {
+  content: "\e909";
+}
+.icon-link:before {
+  content: "\e90a";
+}
+.icon-icon-9:before {
+  content: "\e90b";
+}
+.icon-icon-8:before {
+  content: "\e90c";
+}
+.icon-icon-7:before {
+  content: "\e90d";
+}
+.icon-icon-6:before {
+  content: "\e90e";
+}
+.icon-icon-5:before {
+  content: "\e90f";
+}
+.icon-icon-4:before {
+  content: "\e910";
+}
+.icon-icon-3:before {
+  content: "\e911";
+}
+.icon-icon-2:before {
+  content: "\e912";
+}
+.icon-icon-1:before {
+  content: "\e913";
+}
+.icon-icon:before {
+  content: "\e914";
+}
+.icon-eye:before {
+  content: "\e915";
+}
+.icon-dollar-sign:before {
+  content: "\e916";
+}
+.icon-dashboard-icon:before {
+  content: "\e917";
+}
+.icon-Component-15:before {
+  content: "\e918";
+}
+.icon-Component-11:before {
+  content: "\e919";
+}
+.icon-Component-9:before {
+  content: "\e91a";
+}
+.icon-Component-5:before {
+  content: "\e91b";
+}
+.icon-center:before {
+  content: "\e91c";
+}
+.icon-car:before {
+  content: "\e91d";
+}
+.icon-call:before {
+  content: "\e91e";
+}
+.icon-blood:before {
+  content: "\e91f";
+}
+.icon-arrow-3:before {
+  content: "\e920";
+}
+.icon-arrow-2:before {
+  content: "\e921";
+}
+.icon-arrow-1:before {
+  content: "\e922";
+}
+.icon-arrow:before {
+  content: "\e923";
+}
+.icon-analyze:before {
+  content: "\e924";
+}
