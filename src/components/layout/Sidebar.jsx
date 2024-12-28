@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import { NavLink } from "react-router";
 
 function Sidebar({ isSidebarOpen }) {
   const menuItems = [
     { title: "Dashboard", icon: "icon-dashboard-icon" },
-    { title: "Assets", icon: "icon-dashboard-icon" },
+    { title: "Assets", icon: "icon-dashboard-icon", path: "/assets" },
     { title: "Bookings", icon: "icon-car" },
     { title: "Sell Cars", icon: "icon-dashboard-icon" },
     { title: "Buy Cars", icon: "icon-dashboard-icon" },
@@ -24,19 +25,23 @@ function Sidebar({ isSidebarOpen }) {
       <nav className="flex-1">
         <ul className="space-y-4">
           {menuItems?.map((item, index) => (
-            <li
+            <NavLink
+              to={item?.path || null}
               key={index}
               className="text-gray-400 hover:text-gray-900 flex items-center cursor-pointer"
             >
               <i className={`${item?.icon} mr-3 text-lg`}></i> {item?.title}
-            </li>
+            </NavLink>
           ))}
         </ul>
       </nav>
       <div className="mt-8 space-y-4">
-        <button className="text-gray-600 hover:text-gray-900 flex items-center">
+        <NavLink
+          to="/settings"
+          className="text-gray-600 hover:text-gray-900 flex items-center"
+        >
           <i className="icon-settings mr-3"></i> Settings
-        </button>
+        </NavLink>
         <button className="text-gray-600 hover:text-gray-900 flex items-center">
           <i className="icon-logout mr-3"></i> Log out
         </button>

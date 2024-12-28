@@ -14,9 +14,13 @@ function Assets() {
         </div>
         <div className="md:w-3/5 flex flex-wrap gap-6">
           <CarDetails />
-          <div className="flex flex-wrap justify-between gap-6 w-full">
-            <AvailableCars />
-            <Notes />
+          <div className="flex flex-wrap justify-between w-full">
+            <div className="md:w1/2">
+              <Notes />
+            </div>
+            <div className="md:w1/2">
+              <AvailableCars />
+            </div>
           </div>
         </div>
       </div>

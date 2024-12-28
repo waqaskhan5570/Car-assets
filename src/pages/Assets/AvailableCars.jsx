@@ -8,7 +8,7 @@ function AvailableCars() {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-[14px] py-[20px] px-[18px] shadow-sm w-full">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Available Cars</h2>
       <ul className="space-y-2">
         {cars.map((car, index) => (

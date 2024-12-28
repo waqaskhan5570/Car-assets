@@ -1,45 +1,34 @@
-function Notes() {
-  const notes = [
-    {
-      date: "Monday, 6th April 2020",
-      description: "Book for General Service",
-      status: "complete",
-    },
-    {
-      date: "Thursday, 24th October 2021",
-      description: "Vehicle on hold due to recall",
-      status: "pending",
-    },
-    {
-      date: "Monday, 13th August 2018",
-      description: "Maintenance Completed",
-      status: "complete",
-    },
-  ];
+import { NOTES_LIST, STATUS_CONSTANTS } from "../../utils/constants";
 
+function Notes() {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">Notes</h2>
-      {notes.map((note, index) => (
-        <div
-          key={index}
-          className={`flex items-center justify-between mb-4 p-3 rounded-md ${
-            note.status === "complete" ? "bg-green-100" : "bg-red-100"
-          }`}
-        >
-          <div>
-            <div className="font-semibold">{note.date}</div>
-            <div className="text-sm text-gray-600">{note.description}</div>
+    <div className="bg-white rounded-[14px] shadow-sm py-[20px] px-[18px] w-full">
+      <h3 className="text-primary-dark">Notes</h3>
+      <section>
+        {NOTES_LIST.map((note, index) => (
+          <div key={index} className="flex justify-start mt-[18px]">
+            <div className="me-[14px] w-11 h-11  rounded-full flex items-center justify-center shadow-md">
+              <span className={note?.icon || "icon-analyze"}></span>
+            </div>
+
+            <div>
+              <p className="text-[13px] text-black font-medium">{note?.date}</p>
+              <p className="text-[11px] text-secondary-gray-700">
+                {note?.description}
+              </p>
+              {note?.status === STATUS_CONSTANTS.completed ? (
+                <p className="px-3 py-1 w-fit rounded-[4px] mt-[10px] bg-secondary-green text-[10px] text-white">
+                  Completed
+                </p>
+              ) : (
+                <p className="px-3 py-1 w-fit rounded-[4px] mt-[10px] bg-primary-light text-[10px] text-primary-dark">
+                  {note?.statusTime}
+                </p>
+              )}
+            </div>
           </div>
-          <div
-            className={`px-3 py-1 rounded-md text-white ${
-              note.status === "complete" ? "bg-green-500" : "bg-red-500"
-            }`}
-          >
-            {note.status.toUpperCase()}
-          </div>
-        </div>
-      ))}
+        ))}
+      </section>
     </div>
   );
 }
