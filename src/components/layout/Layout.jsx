@@ -17,7 +17,7 @@ const Layout = () => {
         <Header setIsSidebarOpen={setIsSidebarOpen} />
 
         {/* Main Section */}
-        <main className="p-8 flex-1 bg-primary-light overflow-y-auto ">
+        <main className="p-8 flex-1 bg-gray-100 overflow-y-auto ">
           <Outlet />
         </main>
       </div>
