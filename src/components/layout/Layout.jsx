@@ -1,10 +1,9 @@
-// components/Layout.jsx
 import { useState } from "react";
-import PropTypes from "prop-types";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import { Outlet } from "react-router";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
@@ -18,14 +17,12 @@ const Layout = ({ children }) => {
         <Header setIsSidebarOpen={setIsSidebarOpen} />
 
         {/* Main Section */}
-        <main className="p-4 flex-1 bg-gray-50">{children}</main>
+        <main className="p-8 flex-1 bg-primary-light ">
+          <Outlet />
+        </main>
       </div>
     </div>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

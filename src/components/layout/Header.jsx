@@ -5,7 +5,7 @@ function Header({ setIsSidebarOpen }) {
     setIsSidebarOpen((prev) => !prev);
   };
   return (
-    <header className="bg-white shadow p-4 flex items-center justify-between">
+    <header className="bg-white shadow p-5 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <button
           className="md:hidden p-2 focus:outline-none"
@@ -16,7 +16,7 @@ function Header({ setIsSidebarOpen }) {
         <input
           type="text"
           placeholder="Search or type"
-          className="bg-gray-100 rounded-lg px-4 py-2 text-sm w-full max-w-md"
+          className="bg-gray-100 rounded-lg px-4 py-2 text-sm w-full max-w-lg"
         />
       </div>
       <div className="flex items-center space-x-4">

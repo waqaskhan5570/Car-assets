@@ -5,6 +5,7 @@ const themeColors = {
     dark: "#242731",
     light: "#E0E4E7",
     purple: "#A162F7",
+    blue: "#438FFE",
   },
   secondary: {
     purple: "#A162F7",
