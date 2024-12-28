@@ -15,7 +15,7 @@ function Sidebar({ isSidebarOpen }) {
     <aside
       className={`fixed inset-y-0 left-0 z-50 w-64 bg-white p-5 ps-4 pe-4 transform border-r border-secondary-gray-500 ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-      } md:translate-x-0 transition-transform md:relative md:flex flex-col`}
+      } lg:translate-x-0 transition-transform lg:relative lg:flex flex-col`}
     >
       <div className="flex items-center space-x-2 mb-8 mt-5">
         <img src="/src/assets/logo.svg" alt="Logo" className="h-8" />

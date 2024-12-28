@@ -1,21 +1,27 @@
+import CarTop from "../../assets/images/car-top.png";
 function FuelStats() {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <div className="text-center">
-        <div className="text-2xl font-bold text-gray-700">Fuel Usage</div>
-        <div className="text-xl text-blue-500">2903.89 Ltr</div>
+    <div className="bg-primary-blue text-white rounded-xl py-8 px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <div className="sm:border-r sm:border-[#579BFF]">
+          <p>Fuel Usage</p>
+          <h3>2903.89 Ltr</h3>
+        </div>
+        <div>
+          <p>KM Driven</p>
+          <h3>2903.89 Ltr</h3>
+        </div>
+        <div className="sm:border-r sm:border-[#579BFF]">
+          <p>Total Cost</p>
+          <h3>$3,00,290.00</h3>
+        </div>
+        <div>
+          <p>Top Speed</p>
+          <h3>$5.2K</h3>
+        </div>
       </div>
-      <div className="text-center mt-4">
-        <div className="text-2xl font-bold text-gray-700">KM Driven</div>
-        <div className="text-xl text-blue-500">2903.89 Ltr</div>
-      </div>
-      <div className="text-center mt-4">
-        <div className="text-2xl font-bold text-gray-700">Total Cost</div>
-        <div className="text-xl text-green-500">$3,00,290.00</div>
-      </div>
-      <div className="text-center mt-4">
-        <div className="text-2xl font-bold text-gray-700">Top Speed</div>
-        <div className="text-xl text-red-500">5.2K</div>
+      <div className="relative -mb-52">
+        <img src={CarTop} alt="Car" className="w-full" />
       </div>
     </div>
   );

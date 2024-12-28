@@ -9,13 +9,19 @@ body {
 
 @layer base {
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-xl font-bold;
+    @apply sm:text-2xl;
+    @apply md:text-3xl;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-lg font-bold;
+    @apply sm:text-xl;
+    @apply md:text-2xl;
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply text-base font-bold;
+    @apply sm:text-lg;
+    @apply md:text-xl;
   }
 }
 
