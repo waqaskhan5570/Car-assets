@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?c00hvs");
-  src: url("fonts/icomoon.eot?c00hvs#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?c00hvs") format("truetype"),
-    url("fonts/icomoon.woff?c00hvs") format("woff"),
-    url("fonts/icomoon.svg?c00hvs#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?2r8wfe");
+  src: url("fonts/icomoon.eot?2r8wfe#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?2r8wfe") format("truetype"),
+    url("fonts/icomoon.woff?2r8wfe") format("woff"),
+    url("fonts/icomoon.svg?2r8wfe#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,115 +26,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-voice:before {
+.icon-group:before {
   content: "\e900";
 }
-.icon-video:before {
+.icon-cake:before {
   content: "\e901";
 }
-.icon-tier:before {
+.icon-email:before {
   content: "\e902";
 }
-.icon-service-icon:before {
+.icon-analyze:before {
   content: "\e903";
 }
-.icon-range:before {
+.icon-chat:before {
   content: "\e904";
 }
-.icon-notification .path1:before {
+.icon-doughnut:before {
   content: "\e905";
+  color: #72767c;
 }
-.icon-notification .path2:before {
+.icon-sign-out:before {
   content: "\e906";
-  margin-left: -1em;
+  color: #72767c;
 }
-.icon-message-1:before {
+.icon-cog:before {
   content: "\e907";
+  color: #72767c;
 }
-.icon-message:before {
+.icon-settings:before {
   content: "\e908";
+  color: #72767c;
 }
-.icon-love:before {
+.icon-comment:before {
   content: "\e909";
+  color: #72767c;
 }
-.icon-link:before {
+.icon-calendar:before {
   content: "\e90a";
+  color: #72767c;
 }
-.icon-icon-9:before {
+.icon-fencing:before {
   content: "\e90b";
+  color: #72767c;
 }
-.icon-icon-8:before {
+.icon-cart:before {
   content: "\e90c";
+  color: #72767c;
 }
-.icon-icon-7:before {
+.icon-bag:before {
   content: "\e90d";
-}
-.icon-icon-6:before {
-  content: "\e90e";
-}
-.icon-icon-5:before {
-  content: "\e90f";
-}
-.icon-icon-4:before {
-  content: "\e910";
-}
-.icon-icon-3:before {
-  content: "\e911";
-}
-.icon-icon-2:before {
-  content: "\e912";
-}
-.icon-icon-1:before {
-  content: "\e913";
-}
-.icon-icon:before {
-  content: "\e914";
-}
-.icon-eye:before {
-  content: "\e915";
-}
-.icon-dollar-sign:before {
-  content: "\e916";
-}
-.icon-dashboard-icon:before {
-  content: "\e917";
-}
-.icon-Component-15:before {
-  content: "\e918";
-}
-.icon-Component-11:before {
-  content: "\e919";
-}
-.icon-Component-9:before {
-  content: "\e91a";
-}
-.icon-Component-5:before {
-  content: "\e91b";
-}
-.icon-center:before {
-  content: "\e91c";
+  color: #72767c;
 }
 .icon-car:before {
-  content: "\e91d";
+  content: "\e90e";
+  color: #72767c;
 }
-.icon-call:before {
-  content: "\e91e";
+.icon-dashboard-icon:before {
+  content: "\e90f";
+  color: #5f6165;
 }
-.icon-blood:before {
-  content: "\e91f";
+.icon-info-sign:before {
+  content: "\e910";
+  color: #ff5a5a;
 }
-.icon-arrow-3:before {
-  content: "\e920";
+.icon-notification:before {
+  content: "\e912";
+  color: #72767c;
 }
-.icon-arrow-2:before {
-  content: "\e921";
+.icon-home:before {
+  content: "\e911";
 }
-.icon-arrow-1:before {
-  content: "\e922";
+.icon-menu:before {
+  content: "\e9bd";
 }
-.icon-arrow:before {
-  content: "\e923";
-}
-.icon-analyze:before {
-  content: "\e924";
+.icon-cross:before {
+  content: "\ea0f";
 }

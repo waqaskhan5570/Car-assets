@@ -8,7 +8,6 @@ import { AVAILABLE_CARS } from "../../utils/constants";
 function Assets() {
   const [selectedCar, setSelectedCar] = useState(AVAILABLE_CARS?.[0]);
 
-  console.log(selectedCar);
   return (
     <div>
       <h1>Assets</h1>
@@ -22,11 +21,11 @@ function Assets() {
             title={selectedCar?.modal}
             image={selectedCar?.image || ""}
           />
-          <div className="flex flex-wrap justify-between w-full">
-            <div className="md:w1/2">
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-6 w-full">
+            <div>
               <Notes />
             </div>
-            <div className="md:w1/2">
+            <div>
               <AvailableCars
                 setSelectedCar={setSelectedCar}
                 selectedCar={selectedCar}

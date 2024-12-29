@@ -9,7 +9,7 @@ function DateField({ label, placeholder }) {
         </label>
       )}
       <div className="flex items-center border border-secondary-gray-600 rounded-[10px] px-[14px] py-3">
-        <span className="mr-2 text-gray-500 icon-Component-5"></span>
+        <span className="mr-2 text-gray-500 icon-cake"></span>
         <input
           type="date"
           className=" flex-1 text-secondary-gray-400 outline-none"

@@ -8,8 +8,8 @@ function InputField({ label, placeholder, type, icon }) {
           {label}
         </label>
       )}
-      <div className="flex items-center border border-[#E9EAEC] rounded-[10px] px-[14px] py-3">
-        {icon && <span className="mr-2 text-gray-500 icon-Component-5"></span>}
+      <div className="flex items-center border border-[#E9EAEC] rounded-[10px] font-medium px-[14px] py-3">
+        {icon && <span className={`mr-2 text-gray-500 ${icon}`}></span>}
         <input
           type={type}
           className=" flex-1 text-secondary-gray-400 outline-none"

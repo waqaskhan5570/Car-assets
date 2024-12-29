@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function SelectField({ label, options, name }) {
+function SelectField({ label, options, name, icon }) {
   return (
     <div className="flex flex-col">
       {label && (
@@ -19,7 +19,9 @@ function SelectField({ label, options, name }) {
             </option>
           ))}
         </select>
-        <span className="absolute inset-y-0 left-3 flex items-center  text-gray-500 icon-Component-5"></span>
+        <span
+          className={`absolute inset-y-0 left-3 flex items-center  text-gray-500 ${icon}`}
+        ></span>
       </div>
     </div>
   );
@@ -29,6 +31,7 @@ SelectField.propTypes = {
   label: PropTypes.string,
   options: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default SelectField;

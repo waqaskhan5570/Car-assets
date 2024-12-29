@@ -4,13 +4,13 @@ import { NavLink } from "react-router";
 function Sidebar({ isSidebarOpen }) {
   const menuItems = [
     { title: "Dashboard", icon: "icon-dashboard-icon" },
-    { title: "Assets", icon: "icon-dashboard-icon", path: "/assets" },
+    { title: "Assets", icon: "icon-doughnut", path: "/assets" },
     { title: "Bookings", icon: "icon-car" },
-    { title: "Sell Cars", icon: "icon-dashboard-icon" },
-    { title: "Buy Cars", icon: "icon-dashboard-icon" },
-    { title: "Services", icon: "icon-dashboard-icon" },
-    { title: "Calendar", icon: "icon-dashboard-icon" },
-    { title: "Messages", icon: "icon-message-1" },
+    { title: "Sell Cars", icon: "icon-bag" },
+    { title: "Buy Cars", icon: "icon-cart" },
+    { title: "Services", icon: "icon-fencing" },
+    { title: "Calendar", icon: "icon-calendar" },
+    { title: "Messages", icon: "icon-comment" },
   ];
   return (
     <aside
@@ -28,6 +28,10 @@ function Sidebar({ isSidebarOpen }) {
             <NavLink
               to={item?.path || null}
               key={index}
+              isActive={(match) => {
+                // Apply 'text-blue-500' if match is true, otherwise default
+                return match ? "text-blue-500" : "text-gray-400";
+              }}
               className="text-gray-400 hover:text-gray-900 flex items-center cursor-pointer"
             >
               <i className={`${item?.icon} mr-3 text-lg`}></i> {item?.title}
@@ -43,7 +47,7 @@ function Sidebar({ isSidebarOpen }) {
           <i className="icon-settings mr-3"></i> Settings
         </NavLink>
         <button className="text-gray-600 hover:text-gray-900 flex items-center">
-          <i className="icon-logout mr-3"></i> Log out
+          <i className="icon-sign-out mr-3"></i> Log out
         </button>
       </div>
     </aside>

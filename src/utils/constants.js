@@ -8,21 +8,21 @@ export const NOTES_LIST = [
     date: "Monday, 6th April 2020",
     description: "Book for General Service",
     status: STATUS_CONSTANTS.completed,
-    icon: "icon-analyze",
+    icon: "icon-chat",
   },
   {
     date: "Thursday, 24th October 2021",
     description: "Vehicle LV 001 has been marked for recall.",
     status: STATUS_CONSTANTS.pending,
     statusTime: "14:07-21/11/2021",
-    icon: "icon-icon-3 text-secondary-red",
+    icon: "icon-info-sign text-secondary-red",
   },
   {
     date: "Monday, 13th August 2018",
     description: "Maintenance Completed, Collect",
     status: STATUS_CONSTANTS.pending,
     statusTime: "14:07-21/11/2021",
-    icon: "icon-icon-4",
+    icon: "icon-settings",
   },
 ];
 

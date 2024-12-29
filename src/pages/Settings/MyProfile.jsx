@@ -19,12 +19,14 @@ function MyProfile() {
             label="Live in"
             placeholder="Zuichi, Switzerland"
             type="text"
+            icon="icon-home"
           />
 
           <InputField
             label="Street Address"
             placeholder="2445 Crosswind Drive"
             type="text"
+            icon="icon-home"
           />
 
           <div className="col-span-1 md:col-span-2">
@@ -32,12 +34,18 @@ function MyProfile() {
               label="Email Address"
               placeholder="uihutofficial@gmail.com"
               type="email"
+              icon="icon-email"
             />
           </div>
 
           <DateField label="Date Of Birth" placeholder="07.12.195" />
 
-          <SelectField label="Gender" name="gender" options={GENDER_OPTIONS} />
+          <SelectField
+            label="Gender"
+            name="gender"
+            options={GENDER_OPTIONS}
+            icon="icon-group"
+          />
         </div>
         <hr className="mt-9 mb-6" />
 
