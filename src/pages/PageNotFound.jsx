@@ -1,3 +1,6 @@
+import { NavLink } from "react-router";
+import { ROUTES } from "../utils/routes";
+
 const PageNotFound = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
@@ -10,12 +13,12 @@ const PageNotFound = () => {
           Sorry, the page you&apos;re looking for doesn&apos;t exist or has been
           moved.
         </p>
-        <a
-          href="/"
+        <NavLink
+          to={ROUTES.assets}
           className="inline-block px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
         >
-          Go back to Homepage
-        </a>
+          Go to Assets page
+        </NavLink>
       </div>
     </div>
   );

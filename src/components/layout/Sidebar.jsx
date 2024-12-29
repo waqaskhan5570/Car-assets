@@ -4,14 +4,14 @@ import { ROUTES } from "../../utils/routes";
 
 function Sidebar({ isSidebarOpen, setIsSideBarOpen }) {
   const menuItems = [
-    { title: "Dashboard", icon: "icon-dashboard-icon" },
+    { title: "Dashboard", icon: "icon-dashboard-icon", path: ROUTES.dashboard },
     { title: "Assets", icon: "icon-doughnut", path: ROUTES.assets },
-    { title: "Bookings", icon: "icon-car" },
-    { title: "Sell Cars", icon: "icon-bag" },
-    { title: "Buy Cars", icon: "icon-cart" },
-    { title: "Services", icon: "icon-fencing" },
-    { title: "Calendar", icon: "icon-calendar" },
-    { title: "Messages", icon: "icon-comment" },
+    { title: "Bookings", icon: "icon-car", path: ROUTES.bookings },
+    { title: "Sell Cars", icon: "icon-bag", path: ROUTES.sellCars },
+    { title: "Buy Cars", icon: "icon-cart", path: ROUTES.buyCars },
+    { title: "Services", icon: "icon-fencing", path: ROUTES.services },
+    { title: "Calendar", icon: "icon-calendar", path: ROUTES.calendar },
+    { title: "Messages", icon: "icon-comment", path: ROUTES.messages },
   ];
   return (
     <aside
@@ -32,16 +32,16 @@ function Sidebar({ isSidebarOpen, setIsSideBarOpen }) {
         </button>
       </div>
       <nav className="flex-1">
-        <ul className="space-y-4">
+        <ul className="space-y-[10px] w-[80%]">
           {menuItems?.map((item, index) => (
             <NavLink
-              to={item?.path || null}
+              to={item?.path || "#"}
               key={index}
-              isActive={(match) => {
-                // Apply 'text-blue-500' if match is true, otherwise default
-                return match ? "text-blue-500" : "text-gray-400";
-              }}
-              className="text-gray-400 hover:text-gray-900 flex items-center cursor-pointer"
+              className={({ isActive }) =>
+                `text-gray-400 hover:text-gray-900 flex items-center cursor-pointer ps-2 py-1 rounded-[6px] ${
+                  isActive ? "bg-secondary-gray-900" : "bg-transparent"
+                }`
+              }
             >
               <i className={`${item?.icon} mr-3 text-lg`}></i> {item?.title}
             </NavLink>
@@ -51,11 +51,15 @@ function Sidebar({ isSidebarOpen, setIsSideBarOpen }) {
       <div className="mt-8 space-y-4">
         <NavLink
           to={ROUTES.settings}
-          className="text-gray-600 hover:text-gray-900 flex items-center"
+          className={({ isActive }) =>
+            `text-gray-400 hover:text-gray-900 flex items-center cursor-pointer ps-2 py-1 rounded-[6px] ${
+              isActive ? "bg-secondary-gray-900" : "bg-transparent"
+            }`
+          }
         >
-          <i className="icon-settings mr-3"></i> Settings
+          <i className="icon-cog mr-3"></i> Settings
         </NavLink>
-        <button className="text-gray-600 hover:text-gray-900 flex items-center">
+        <button className="text-gray-400 hover:text-gray-900 flex items-center cursor-pointer ps-2 py-1 rounded-[6px] ">
           <i className="icon-sign-out mr-3"></i> Log out
         </button>
       </div>
