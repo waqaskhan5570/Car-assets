@@ -1,8 +1,19 @@
 import PropTypes from "prop-types";
 import { AVAILABLE_CARS } from "../../utils/constants";
 import { formatNumber } from "../../utils/utility-functions";
+import { useMemo, useState } from "react";
 
 function AvailableCars({ selectedCar, setSelectedCar }) {
+  const [showAll, setShowAll] = useState(false);
+
+  const handleSeeAll = () => {
+    setShowAll(!showAll);
+  };
+
+  const carsToShow = useMemo(
+    () => (showAll ? AVAILABLE_CARS : AVAILABLE_CARS.slice(0, 5)),
+    [showAll]
+  );
   return (
     <div className="bg-white rounded-[14px] shadow-sm py-[20px] px-[18px] w-full">
       <div className="flex justify-between items-center mb-4">
@@ -13,7 +24,7 @@ function AvailableCars({ selectedCar, setSelectedCar }) {
       </div>
       <hr className="my-5" />
       <ul className="space-y-2">
-        {AVAILABLE_CARS.map((car, index) => {
+        {carsToShow.map((car, index) => {
           const isSelected = selectedCar?.id === car?.id;
           return (
             <li
@@ -48,8 +59,11 @@ function AvailableCars({ selectedCar, setSelectedCar }) {
           );
         })}
       </ul>
-      <button className="mt-5 bg-secondary-red text-white text-sm py-1 px-3 rounded-[5px] hover:bg-secondary-red">
-        See All
+      <button
+        onClick={handleSeeAll}
+        className="mt-5 bg-secondary-red text-white text-sm py-1 px-3 rounded-[5px] hover:bg-secondary-red"
+      >
+        {showAll ? "See Less" : "See All"}
       </button>
     </div>
   );

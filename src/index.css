@@ -52,3 +52,39 @@ body {
 ::-webkit-scrollbar-corner {
   background-color: transparent; /* Remove bottom right corner */
 }
+
+/* Style for the checkbox */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  appearance: none; /* Removes the default checkbox appearance */
+  border: 1px solid gray;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Style when the checkbox is checked */
+input[type="checkbox"]:checked {
+  @apply bg-secondary-red;
+  @apply border-secondary-red;
+}
+
+/* Add a custom tick mark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 11px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+}
+
+/* Style when checkbox is unchecked */
+input[type="checkbox"]:not(:checked) {
+  background-color: #fff;
+  border-color: #ccc;
+}

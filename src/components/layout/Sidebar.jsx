@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router";
+import { ROUTES } from "../../utils/routes";
 
-function Sidebar({ isSidebarOpen }) {
+function Sidebar({ isSidebarOpen, setIsSideBarOpen }) {
   const menuItems = [
     { title: "Dashboard", icon: "icon-dashboard-icon" },
-    { title: "Assets", icon: "icon-doughnut", path: "/assets" },
+    { title: "Assets", icon: "icon-doughnut", path: ROUTES.assets },
     { title: "Bookings", icon: "icon-car" },
     { title: "Sell Cars", icon: "icon-bag" },
     { title: "Buy Cars", icon: "icon-cart" },
@@ -18,9 +19,17 @@ function Sidebar({ isSidebarOpen }) {
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } lg:translate-x-0 transition-transform lg:relative lg:flex flex-col`}
     >
-      <div className="flex items-center space-x-2 mb-8 mt-5">
-        <img src="/src/assets/logo.svg" alt="Logo" className="h-8" />
-        <h2>Test</h2>
+      <div className="flex justify-between items-center mb-8 mt-5">
+        <div className="flex space-x-2">
+          <img src="/src/assets/logo.svg" alt="Logo" className="h-8" />
+          <h2>Test</h2>
+        </div>
+        <button className="lg:hidden">
+          <span
+            className="icon-cross cursor-pointer"
+            onClick={() => setIsSideBarOpen(false)}
+          ></span>
+        </button>
       </div>
       <nav className="flex-1">
         <ul className="space-y-4">
@@ -41,7 +50,7 @@ function Sidebar({ isSidebarOpen }) {
       </nav>
       <div className="mt-8 space-y-4">
         <NavLink
-          to="/settings"
+          to={ROUTES.settings}
           className="text-gray-600 hover:text-gray-900 flex items-center"
         >
           <i className="icon-settings mr-3"></i> Settings
@@ -56,6 +65,7 @@ function Sidebar({ isSidebarOpen }) {
 
 Sidebar.propTypes = {
   isSidebarOpen: PropTypes.bool.isRequired,
+  setIsSideBarOpen: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

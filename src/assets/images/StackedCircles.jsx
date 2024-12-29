@@ -1,17 +1,17 @@
 function StackedCircles() {
   return (
-    <div className="relative flex justify-center mt-[-60px]">
+    <div className="relative flex justify-center mt-[-120px] mx-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 300"
-        width="300"
-        height="150"
+        viewBox="0 0 500 280"
+        width="100%" // Ensures the SVG takes the full width of its container
+        height="250"
       >
         {/* Bottom Circle */}
         <ellipse
           cx="250"
           cy="220"
-          rx="200"
+          rx="220"
           ry="50"
           fill="url(#gradient)"
           opacity="0.5"
@@ -26,7 +26,7 @@ function StackedCircles() {
           opacity="0.7"
         />
         {/* Top Circle */}
-        <ellipse cx="250" cy="140" rx="240" ry="70" fill="url(#gradient)" />
+        <ellipse cx="250" cy="140" rx="220" ry="70" fill="url(#gradient)" />
         {/* Gradient Definition */}
         <defs>
           <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">

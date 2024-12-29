@@ -9,7 +9,10 @@ const Layout = () => {
   return (
     <div className="flex flex-col md:flex-row h-screen">
       {/* Sidebar */}
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSideBarOpen={setIsSidebarOpen}
+      />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
