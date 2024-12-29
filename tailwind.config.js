@@ -16,6 +16,8 @@ const themeColors = {
     orange: "#FF764C",
     gray: {
       400: "#5F6165",
+      500: "#7C7C8D",
+      600: "#E9EAEC",
       700: "#72767C",
     },
   },

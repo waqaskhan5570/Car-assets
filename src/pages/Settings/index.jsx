@@ -4,7 +4,7 @@ import MyProfile from "./MyProfile";
 import OtherTabs from "./OtherTabs";
 
 function Settings() {
-  const [activeTab, setActiveTab] = useState(TABS.notification);
+  const [activeTab, setActiveTab] = useState(TABS.details);
 
   // map component with it's key corresponding key
   const TAB_COMPONENTS = {
@@ -28,7 +28,7 @@ function Settings() {
         {TABS_LIST?.map((tab) => (
           <button
             key={tab?.key}
-            className={`text-lg text-secondary-gray-400 ${
+            className={`text-sm sm:text-lg text-secondary-gray-400 font-medium rounded ${
               activeTab === tab?.key
                 ? "bg-primary-purple bg-opacity-10 text-[#242731] py-1 px-3"
                 : ""
