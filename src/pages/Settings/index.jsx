@@ -21,10 +21,10 @@ function Settings() {
   };
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white">
       <h1 className="text-primary-dark">Settings</h1>
 
-      <div className="flex space-x-6 pb-4 mb-6 mt-[30px] overflow-x-auto">
+      <div className="flex space-x-14 pb-4 mb-6 mt-[30px] overflow-x-auto">
         {TABS_LIST?.map((tab) => (
           <button
             key={tab?.key}

@@ -1,6 +1,8 @@
 import DateField from "../../components/UI/FormFields/DateField";
 import InputField from "../../components/UI/FormFields/InputField";
 import SelectField from "../../components/UI/FormFields/SelectField";
+import ProfilePhotoCard from "../../components/UI/ProfilePhotoCard";
+import SocialProfiles from "../../components/UI/SocialProfiles";
 import { GENDER_OPTIONS } from "../../utils/constants";
 
 function MyProfile() {
@@ -37,57 +39,15 @@ function MyProfile() {
 
           <SelectField label="Gender" name="gender" options={GENDER_OPTIONS} />
         </div>
+        <hr className="mt-9 mb-6" />
 
-        <div className="mt-6">
-          <label className="block text-sm font-medium text-gray-700">
-            Your Photo
-          </label>
-          <div className="mt-2 flex items-center space-x-4">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Profile"
-              className="h-16 w-16 rounded-full"
-            />
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700"
-            >
-              Update
-            </button>
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-md hover:bg-gray-200"
-            >
-              Delete
-            </button>
-          </div>
+        <div className="md:w-11/12">
+          <ProfilePhotoCard />
         </div>
 
-        <div className="mt-6">
-          <label className="block text-sm font-medium text-gray-700">
-            Social Profiles
-          </label>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
-            <input
-              type="url"
-              placeholder="facebook.com/"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
-            />
-            <input
-              type="url"
-              placeholder="twitter.com/"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
-            />
-          </div>
-        </div>
-
-        <div className="mt-6 flex justify-end">
-          <button
-            type="submit"
-            className="px-6 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700"
-          >
-            Save Changes
-          </button>
+        <hr className="mt-9 mb-6" />
+        <div className="md:w-3/5">
+          <SocialProfiles />
         </div>
       </form>
     </div>

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function InputField({ label, placeholder, type }) {
+function InputField({ label, placeholder, type, icon }) {
   return (
     <div className="flex flex-col">
       {label && (
@@ -9,7 +9,7 @@ function InputField({ label, placeholder, type }) {
         </label>
       )}
       <div className="flex items-center border border-[#E9EAEC] rounded-[10px] px-[14px] py-3">
-        <span className="mr-2 text-gray-500 icon-Component-5"></span>
+        {icon && <span className="mr-2 text-gray-500 icon-Component-5"></span>}
         <input
           type={type}
           className=" flex-1 text-secondary-gray-400 outline-none"
@@ -24,6 +24,7 @@ InputField.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   type: PropTypes.string,
+  icon: PropTypes.string,
 };
 
 InputField.defaultProps = {
