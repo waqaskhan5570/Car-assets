@@ -1,31 +1,63 @@
-function AvailableCars() {
-  const cars = [
-    { name: "Toyota Corolla", distance: "15km" },
-    { name: "Kia - Picanto", distance: "20km" },
-    { name: "Suzuki", distance: "5km" },
-    { name: "Honda City", distance: "50km" },
-    { name: "Mercedes", distance: "2km" },
-  ];
+import PropTypes from "prop-types";
+import { AVAILABLE_CARS } from "../../utils/constants";
+import { formatNumber } from "../../utils/utility-functions";
 
+function AvailableCars({ selectedCar, setSelectedCar }) {
   return (
-    <div className="bg-white rounded-[14px] py-[20px] px-[18px] shadow-sm w-full">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">Available Cars</h2>
+    <div className="bg-white rounded-[14px] shadow-sm py-[20px] px-[18px] w-full">
+      <div className="flex justify-between items-center mb-4">
+        <p className="text-lg font-medium text-black">Available Cars</p>
+        <button className="text-secondary-gray-700 font-medium text-xs">
+          Assets <span className="ml-1">▼</span>
+        </button>
+      </div>
+      <hr className="my-5" />
       <ul className="space-y-2">
-        {cars.map((car, index) => (
-          <li
-            key={index}
-            className="flex items-center justify-between bg-gray-100 p-3 rounded-md"
-          >
-            <span className="font-medium text-gray-800">{car.name}</span>
-            <span className="text-gray-500">{car.distance}</span>
-          </li>
-        ))}
+        {AVAILABLE_CARS.map((car, index) => {
+          const isSelected = selectedCar?.id === car?.id;
+          return (
+            <li
+              key={index}
+              className={`flex items-center justify-between px-2 py-1 rounded-md cursor-pointer ${
+                isSelected ? " text-primary-red" : ""
+              }`}
+              onClick={() => setSelectedCar(car)}
+            >
+              <div
+                className={`flex items-center text-${
+                  !isSelected ? "secondary-gray-700" : "primary-red"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isSelected}
+                  readOnly
+                  className="mr-2"
+                />
+                <span className="text-[13px] font-medium">{car?.modal} </span>
+                <span className="text-[13px]  ms-2">
+                  {car?.Driver ? `(${formatNumber(car?.Driver) + "km"})` : ""}
+                </span>
+              </div>
+              <span
+                className={`text-md font-medium icon-analyze ${
+                  !isSelected ? "text-secondary-gray-700" : ""
+                }`}
+              ></span>
+            </li>
+          );
+        })}
       </ul>
-      <button className="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
+      <button className="mt-5 bg-secondary-red text-white text-sm py-1 px-3 rounded-[5px] hover:bg-secondary-red">
         See All
       </button>
     </div>
   );
 }
+
+AvailableCars.propTypes = {
+  selectedCar: PropTypes.object.isRequired,
+  setSelectedCar: PropTypes.func.isRequired,
+};
 
 export default AvailableCars;

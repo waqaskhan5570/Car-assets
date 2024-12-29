@@ -6,6 +6,7 @@ const themeColors = {
     light: "#E0E4E7",
     purple: "#A162F7",
     blue: "#438FFE",
+    red: "#D43B3B",
   },
   secondary: {
     purple: "#A162F7",
@@ -19,6 +20,7 @@ const themeColors = {
       500: "#7C7C8D",
       600: "#E9EAEC",
       700: "#72767C",
+      800: "#A4A5A6",
     },
   },
 };

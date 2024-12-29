@@ -1,18 +1,14 @@
+import PropTypes from "prop-types";
 import StackedCircles from "../../assets/images/StackedCircles.jsx";
-function CarDetails() {
+
+function CarDetails({ title, image }) {
   return (
     <div className="relative w-full bg-white shadow-lg rounded-lg p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        2022 Mercedes Benz
-      </h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
 
       {/* Car Image */}
       <div className="flex justify-center relative">
-        <img
-          src="https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" // Replace with the actual path to your car image
-          alt="Car"
-          className="w-64 h-auto"
-        />
+        <img src={image} alt={`${title} image`} className="w-64 h-auto" />
       </div>
 
       {/* Stacked Circles SVG */}
@@ -20,5 +16,10 @@ function CarDetails() {
     </div>
   );
 }
+
+CarDetails.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+};
 
 export default CarDetails;
